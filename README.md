@@ -1,3 +1,3 @@
 # Streamlit Cookbook
 
-README to be added here
+Streamlit Cookbook is a compilation of Streamlit app templates that you can use as boilerplate code to jumpstart your own app creation endeavors.
