@@ -7,3 +7,7 @@ For your convenience, we've categorized tool integrations by library name. For i
 
 ## How to run the app?
 To run the app, start by installing Streamlit in the command line using the `pip install streamlit` command. Next, change into the directory and launch the app via `streamlit run streamlit_app.py`.
+
+## How to contribute to this repo?
+...
+
