@@ -9,6 +9,6 @@ For your convenience, we've categorized tool integrations by library name. For i
 To run the app, start by installing Streamlit on the command line using the `pip install streamlit` command. Next, change into the directory and launch the app via `streamlit run streamlit_app.py`.
 
 ## How to contribute to this repo?
-We welcome contributions to this repository  Contributions can come in many forms whether it be suggesting a recipe idea (please suggest it on the [issues page](#)), writing a new recipe, improving a pre-existing recipe, or fixing a typo/error.
+We welcome contributions to this repository  Contributions can come in many forms whether it be suggesting a recipe idea (please suggest it on the [issues page](https://github.com/streamlit/streamlit-cookbook/issues)), writing a new recipe, improving a pre-existing recipe, or fixing a typo/error.
 
 Simply submit a pull request [here](#) to get started.
