@@ -1,0 +1,7 @@
+crewai
+streamlit 
+openai
+unstructured
+langchain
+pyowm
+tools
