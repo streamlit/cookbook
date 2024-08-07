@@ -165,7 +165,7 @@ with left:
     )
 
 
-@st.experimental_fragment(run_every="5s")
+@st.fragment(run_every="5s")
 def task_df() -> None:
     st.text("Task Status")
     st.button("Refresh")
@@ -281,7 +281,7 @@ def task_df() -> None:
 task_df()
 
 
-@st.experimental_fragment(run_every=5)
+@st.fragment(run_every=5)
 def process_completed_tasks(completed_queue: queue.Queue) -> None:
     task_res: Optional[TaskResult] = None
     try:
@@ -299,7 +299,7 @@ def process_completed_tasks(completed_queue: queue.Queue) -> None:
 process_completed_tasks(completed_queue=completed_tasks_queue)
 
 
-@st.experimental_fragment(run_every=5)
+@st.fragment(run_every=5)
 def process_human_input_requests(
     human_requests_queue: queue.Queue[HumanRequest],
 ) -> None:

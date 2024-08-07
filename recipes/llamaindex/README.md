@@ -17,6 +17,12 @@ system.
 
 ## Pre-Requisites
 
+### Poetry
+
+For this app, we use [Poetry](https://python-poetry.org/) as the package's
+dependency manager. The `poetry` cli tool is what we'll need to install the package's
+virtual environment in order to run our streamlit app.
+
 ### Docker
 
 To run this demo, we make use of `Docker`, specifically `docker-compose`. For this
@@ -48,9 +54,19 @@ docker-compose up --build
 
 ### Streamlit App
 
-Once the services are all running, you can then run the streamlit app.
+Once the services are all running, you can then run the streamlit app. First,
+ensure that you have the package's virtual environment active and the environment
+variables set. Again, while in the root directory of this project, run the commands
+found below:
 
 ```sh
+poetry shell
+poetry install
 set -a && source .env.local
+```
+
+Next, run the streamlit app:
+
+```sh
 streamlit run llamaindex_cookbook/apps/streamlit.py
 ```

@@ -46,6 +46,3 @@ ENV PATH="${VIRTUAL_ENV}/bin:${PATH}"
 # Copy source code
 COPY ./logging.ini ./logging.ini
 COPY ./llamaindex_cookbook ./llamaindex_cookbook
-
-# Copy data for Agentic RAG
-COPY ./data ./data
