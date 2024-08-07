@@ -32,8 +32,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-      secrets:
-        - id_ed25519
     healthcheck:
       test: wget --no-verbose --tries=1 http://0.0.0.0:8001/ || exit 1
       interval: 30s
@@ -60,8 +58,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-      secrets:
-        - id_ed25519
     healthcheck:
       test: wget --no-verbose --tries=1 http://0.0.0.0:8002/is_worker_running || exit 1
       interval: 30s
@@ -88,8 +84,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-      secrets:
-        - id_ed25519
     healthcheck:
       test: wget --no-verbose --tries=1 http://0.0.0.0:8003/is_worker_running || exit 1
       interval: 30s
@@ -116,8 +110,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-      secrets:
-        - id_ed25519
     healthcheck:
       test: wget --no-verbose --tries=1 http://0.0.0.0:8004/is_worker_running || exit 1
       interval: 30s
@@ -144,8 +136,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-      secrets:
-        - id_ed25519
     healthcheck:
       test: wget --no-verbose --tries=1 http://0.0.0.0:8005/is_worker_running || exit 1
       interval: 30s
@@ -172,8 +162,6 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-      secrets:
-        - id_ed25519
     healthcheck:
       test: wget --no-verbose --tries=1 http://0.0.0.0:8006/is_worker_running || exit 1
       interval: 30s
@@ -182,6 +170,3 @@ services:
       timeout: 10s
 volumes:
   rabbitmq:
-secrets:
-  id_ed25519:
-    file: ~/.ssh/id_ed25519

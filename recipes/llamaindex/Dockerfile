@@ -22,7 +22,6 @@ ENV POETRY_VIRTUALENVS_CREATE=true
 COPY ./poetry.lock ./pyproject.toml ./
 
 RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
-RUN --mount=type=secret,id=id_ed25519,dst=/root/.ssh/id_ed25519 poetry install --no-cache --no-root -vvv
 
 RUN poetry install --no-cache --no-root
 
