@@ -3,4 +3,4 @@
 
 *.pyc
 
-.env
+*secrets.toml
