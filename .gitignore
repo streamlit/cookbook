@@ -1,1 +1,6 @@
-git ignore to be added here
+.DS_Store
+.vscode
+
+*.pyc
+
+.env
