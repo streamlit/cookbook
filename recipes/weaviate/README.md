@@ -1,1 +1,1 @@
-
+# Weaviate recipe
