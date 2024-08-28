@@ -1,4 +1,5 @@
 # How to run the demo app (Optional: Add what kind of app it is/the tech the app is built with)
+## Overview
 This is a recipe for a [TODO: Add the kind of app it is]. TODO: Add one sentence describing what the app does.
 
 Other ways to explore this recipe:
