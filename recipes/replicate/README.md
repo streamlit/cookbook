@@ -1,10 +1,15 @@
 # How to run the demo Replicate Streamlit chatbot app
-This is a demo of a Replicate Streamlit chatbot app. The app uses a single API to access 3 different LLMs and adjust parameters such as temperature and top-p.
+This is a recipe for a Replicate Streamlit chatbot app. The app uses a single API to access 3 different LLMs and adjust parameters such as temperature and top-p.
 
-For a walkthrough of the demo and to hear from Replicate founding designer Zeke Sikelianos, check out the video [here](https://youtu.be/zsQ7EN10zj8).
+Other ways to explore this recipe:
+* [Deployed app](https://replicate-recipe.streamlit.app/)
+    
+    (Requires [Replicate API token](https://replicate.com/signin?next=/account/api-tokens))
+* [Blog post](https://blog.streamlit.io/how-to-create-an-ai-chatbot-llm-api-replicate-streamlit/)
+* [Video](https://youtu.be/zsQ7EN10zj8?si=fGxg4zH7mJyrasaT)
 
 ## Prerequisites
-* Python
+* Python >=3.8, !=3.9.7
 * A [Replicate API token](https://replicate.com/signin?next=/account/api-tokens)
     (Please note that a payment method is required to access features beyond the free trial limits.)
 
