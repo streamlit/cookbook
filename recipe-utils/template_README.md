@@ -1,5 +1,5 @@
 # How to run the demo app (Optional: Add what kind of app it is/the tech the app is built with)
-## Overview
+## 🔍 Overview
 This is a recipe for a [TODO: Add the kind of app it is]. TODO: Add one sentence describing what the app does.
 
 Other ways to explore this recipe:
@@ -7,11 +7,11 @@ Other ways to explore this recipe:
 * [Blog post](TODO: URL of blog post)
 * [Video](TODO: URL of video)
 
-## Prerequisites
+## 📝 Prerequisites
 * Python >=3.8, !=3.9.7
 * TODO: List additional prerequisites 
 
-## Environment setup
+## 🌎 Environment setup
 ### Local setup
 1. Clone the Cookbook repo: `git clone https://github.com/streamlit/cookbook.git`
 2. From the Cookbook root directory, change directory into the recipe: `cd recipes/TODO: Add recipe directory`
