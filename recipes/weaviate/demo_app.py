@@ -133,11 +133,7 @@ def perform_search(conn, movie_type, rag_prompt, year_range, mode):
             cols = st.columns(NUM_IMAGES_PER_ROW)
             for index, row in df.iterrows():
                 col = cols[index % NUM_IMAGES_PER_ROW]
-                if row["poster"]:
-                    col.image(base64_to_image(row["poster"]), width=200)
-                    images.append(base64_to_image(row["poster"]))
-                else:
-                    col.write(f"No Image Available for: {row['title']}")
+                col.write(row['title'])
             st.write("Now generating recommendation from these: ...")
 
         st.session_state.messages.append(
