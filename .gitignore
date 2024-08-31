@@ -12,6 +12,7 @@ __pycache__/
 
 # Environments
 replicatevenv/
+weaviatevenv/
 
 # Secrets
 *secrets.toml
