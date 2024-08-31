@@ -1,0 +1,14 @@
+{ Get {MovieDemo (limit: 3
+where: { path: ["release_year"],
+operator: Equal,
+valueInt: 1985}) {
+  budget
+  movie_id
+  overview
+  release_year
+  revenue
+  tagline
+  title
+  vote_average
+  vote_count
+}}}

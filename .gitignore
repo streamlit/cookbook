@@ -17,3 +17,6 @@ weaviatevenv/
 # Secrets
 *secrets.toml
 
+# Recipe specific
+recipes/weaviate/helpers/data/posters
+
