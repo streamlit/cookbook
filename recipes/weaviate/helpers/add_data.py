@@ -134,7 +134,7 @@ with movies.batch.fixed_size(100) as batch:
         except Exception as e:
             print(f"Error: {e}")
             movies_df = movies_df.drop(i)
-            movies_df.to_json("./data/1950_2024_movies_info.json", orient="records")
+            movies_df.to_json(json_file_path, orient="records")
             continue
 
 # Close the connection to Weaviate Cloud
