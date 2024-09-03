@@ -83,10 +83,11 @@ movies = client.collections.create(
             name="budget",
             data_type=DataType.INT,
         ),
-        Property(
-            name="poster",
-            data_type=DataType.BLOB
-        ),
+        # Uncomment the lines below if you want to use this with poster images
+        # Property(
+        #     name="poster",
+        #     data_type=DataType.BLOB
+        # ),
     ],
     vectorizer_config=Configure.Vectorizer.text2vec_cohere(),
     vector_index_config=Configure.VectorIndex.hnsw(
@@ -109,9 +110,10 @@ with movies.batch.fixed_size(100) as batch:
             date_object = datetime.strptime(movie_row["release_date"], "%Y-%m-%d").replace(
                 tzinfo=timezone.utc
             )
-            img_path = (img_dir / f"{movie_row['id']}_poster.jpg")
-            with open(img_path, "rb") as file:
-                poster_b64 = base64.b64encode(file.read()).decode("utf-8")
+            # Uncomment the lines below if you want to use this with poster images
+            # img_path = (img_dir / f"{movie_row['id']}_poster.jpg")
+            # with open(img_path, "rb") as file:
+            #     poster_b64 = base64.b64encode(file.read()).decode("utf-8")
 
             props = {
                 k: movie_row[k]
@@ -128,7 +130,8 @@ with movies.batch.fixed_size(100) as batch:
             props["movie_id"] = movie_row["id"]
             props["release_year"] = date_object.year
             props["genres"] = [genre["name"] for genre in movie_row["genres"]]
-            props["poster"] = poster_b64
+            # Uncomment the line below if you want to use this with poster images
+            # props["poster"] = poster_b64
 
             batch.add_object(properties=props, uuid=generate_uuid5(movie_row["id"]))
         except Exception as e:
