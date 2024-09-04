@@ -8,7 +8,7 @@ from weaviate.classes.query import Filter
 
 # Constants
 ENV_VARS = ["WEAVIATE_URL", "WEAVIATE_API_KEY", "COHERE_API_KEY"]
-NUM_IMAGES_PER_ROW = 5
+NUM_RECOMMENDATIONS_PER_ROW = 5
 SEARCH_LIMIT = 10
 
 # Search Mode descriptions
@@ -34,11 +34,18 @@ def display_chat_messages():
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
             if "images" in message:
-                for i in range(0, len(message["images"]), NUM_IMAGES_PER_ROW):
-                    cols = st.columns(NUM_IMAGES_PER_ROW)
+                for i in range(0, len(message["images"]), NUM_RECOMMENDATIONS_PER_ROW):
+                    cols = st.columns(NUM_RECOMMENDATIONS_PER_ROW)
                     for j, col in enumerate(cols):
                         if i + j < len(message["images"]):
                             col.image(message["images"][i + j], width=200)
+            if "titles" in message:
+                for i in range(0, len(message["titles"]), NUM_RECOMMENDATIONS_PER_ROW):
+                    cols = st.columns(NUM_RECOMMENDATIONS_PER_ROW)
+                    for j, col in enumerate(cols):
+                        if i + j < len(message["titles"]):
+                            col.write(message["titles"][i + j])
+
 
 def base64_to_image(base64_str):
     """Convert base64 string to image"""
@@ -112,7 +119,10 @@ def perform_search(conn, movie_type, rag_prompt, year_range, mode):
     df = conn.query(
         "MovieDemo",
         query=movie_type,
-        return_properties=["title", "tagline", "poster"],
+        # Uncomment the line below  if you want to use this with poster images
+        # return_properties=["title", "tagline", "poster"],
+        # Comment out the line below  if you want to use this with poster images
+        return_properties=["title", "tagline"],
         filters=(
             WeaviateFilter.by_property("release_year").greater_or_equal(year_range[0]) &
             WeaviateFilter.by_property("release_year").less_or_equal(year_range[1])
@@ -122,6 +132,8 @@ def perform_search(conn, movie_type, rag_prompt, year_range, mode):
     )
 
     images = []
+    titles = []
+    
     if df is None or df.empty:
         with st.chat_message("assistant"):
             st.write(f"No movies found matching {movie_type} and using {mode}. Please try again.")
@@ -130,20 +142,21 @@ def perform_search(conn, movie_type, rag_prompt, year_range, mode):
     else:
         with st.chat_message("assistant"):
             st.write("Raw search results.")
-            cols = st.columns(NUM_IMAGES_PER_ROW)
+            cols = st.columns(NUM_RECOMMENDATIONS_PER_ROW)
             for index, row in df.iterrows():
-                col = cols[index % NUM_IMAGES_PER_ROW]
-                if row["poster"]:
+                col = cols[index % NUM_RECOMMENDATIONS_PER_ROW]
+                if "poster" in row and row["poster"]:
                     col.image(base64_to_image(row["poster"]), width=200)
                     images.append(base64_to_image(row["poster"]))
                 else:
-                    col.write(f"No Image Available for: {row['title']}")
+                    col.write(f"{row['title']}")
+                    titles.append(row["title"])
+            
             st.write("Now generating recommendation from these: ...")
 
         st.session_state.messages.append(
-            {"role": "assistant", "content": "Raw search results. Generating recommendation from these: ...", "images": images}
-        )
-
+            {"role": "assistant", "content": "Raw search results. Generating recommendation from these: ...", "images": images, "titles": titles})
+        
         with conn.client() as client:
             collection = client.collections.get("MovieDemo")
             response = collection.generate.hybrid(
