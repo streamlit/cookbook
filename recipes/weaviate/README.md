@@ -45,8 +45,8 @@ Other ways to explore this recipe:
     }}}
     ```
 
-    #### Run the app
-    1. Run the app with: `streamlit run demo_app.py`
-    2. The app should spin up in a new browser tab
-       
-       (Please note that this version of the demo app does not feature the poster images so it will look different from the [deployed app](https://weaviate-movie-magic.streamlit.app/).) 
+#### Run the app
+1. Run the app with: `streamlit run demo_app.py`
+2. The app should spin up in a new browser tab
+    
+    (Please note that this version of the demo app does not feature the poster images so it will look different from the [deployed app](https://weaviate-movie-magic.streamlit.app/).) 
