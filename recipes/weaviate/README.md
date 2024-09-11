@@ -4,6 +4,7 @@ This is a recipe for a movie recommendation app. The app uses [Weaviate](https:/
 Other ways to explore this recipe:
 * [Deployed app](https://weaviate-movie-magic.streamlit.app/)
 * [Video](https://youtu.be/SQD-aWlhqvM?si=t54W53G1gWnTAiwx)
+* [Blog post](https://blog.streamlit.io/how-to-recommendation-app-vector-database-weaviate/)
 
 ## Prerequisites
 * Python >=3.8, !=3.9.7
