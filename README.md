@@ -22,5 +22,5 @@ Simply submit a pull request [here](https://github.com/streamlit/streamlit-cookb
 - [Weaviate](https://github.com/streamlit/cookbook/tree/main/recipes/weaviate)
 
 ### Data Recipes
-- [Replit](https://github.com/streamlit/cookbook/tree/main/recipes/replit)
+- [Replit](https://github.com/streamlit/cookbook/tree/main/recipes/replit) - Build a statistical AB testing app that allow users to adjust parameters and see its influence on the minimum detectable effect.
 
