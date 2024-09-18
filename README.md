@@ -14,3 +14,13 @@ To run the app, start by installing Streamlit on the command line using the `pip
 We welcome contributions to this repository  Contributions can come in many forms whether it be suggesting a recipe idea (please suggest it on the [issues page](https://github.com/streamlit/streamlit-cookbook/issues)), writing a new recipe, improving a pre-existing recipe, or fixing a typo/error.
 
 Simply submit a pull request [here](https://github.com/streamlit/streamlit-cookbook/pulls) to get started.
+
+## List of Recipes
+
+### AI Recipes
+- [Replicate](https://github.com/streamlit/cookbook/tree/main/recipes/replicate)
+- [Weaviate](https://github.com/streamlit/cookbook/tree/main/recipes/weaviate)
+
+### Data Recipes
+- [Replit](https://github.com/streamlit/cookbook/tree/main/recipes/replit)
+
