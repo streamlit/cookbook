@@ -13,6 +13,7 @@ For your convenience, we've categorized tool integrations by library name. For i
 | Tool | Description | Resources |
 | -- | -- | -- |
 | [Replicate](https://github.com/streamlit/cookbook/tree/main/recipes/replicate) | Build a LLM-powered chatbot that allow users to select an LLM model of their choice for response generation. | [YouTube video]() |
+| [Trulens](https://github.com/streamlit/cookbook/tree/main/recipes/trulens) | Ask questions about the Pacific Northwest and get TruLens evaluations on the app response. | |
 | [Weaviate](https://github.com/streamlit/cookbook/tree/main/recipes/weaviate) | Build a movie explorer app that leverages the Weaviate vector database. | [YouTube video](https://youtu.be/SQD-aWlhqvM) |
 
 ### Data Recipes
