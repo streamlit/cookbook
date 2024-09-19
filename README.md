@@ -13,7 +13,8 @@ For your convenience, we've categorized tool integrations by library name. For i
 | Tool | Description | Resources |
 | -- | -- | -- |
 | [CrewAI](https://github.com/streamlit/cookbook/tree/main/recipes/crewai) | Build the VacAIgent app where agents collaboratively decide on cities and craft a complete itinerary for your trip based on specified preferences. | | 
-| [Replicate](https://github.com/streamlit/cookbook/tree/main/recipes/replicate) | Build a LLM-powered chatbot that allow users to select an LLM model of their choice for response generation. | [Video](https://youtu.be/zsQ7EN10zj8), [Blog](https://blog.streamlit.io/how-to-recommendation-app-vector-database-weaviate/) |
+| [Ollama](https://github.com/streamlit/cookbook/tree/main/recipes/ollama) | Build a Streamlit Ollama chatbot using a local LLM model. | |
+| [Replicate](https://github.com/streamlit/cookbook/tree/main/recipes/replicate) | Build a Streamlit Replicate chatbot that allow users to select an LLM model of their choice for response generation. | [Video](https://youtu.be/zsQ7EN10zj8), [Blog](https://blog.streamlit.io/how-to-recommendation-app-vector-database-weaviate/) |
 | [Trulens](https://github.com/streamlit/cookbook/tree/main/recipes/trulens) | Ask questions about the Pacific Northwest and get TruLens evaluations on the app response. | |
 | [Weaviate](https://github.com/streamlit/cookbook/tree/main/recipes/weaviate) | Build a movie explorer app that leverages the Weaviate vector database. | [Video](https://youtu.be/SQD-aWlhqvM), [Blog](https://blog.streamlit.io/how-to-recommendation-app-vector-database-weaviate/) |
 
