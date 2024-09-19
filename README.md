@@ -14,7 +14,8 @@ For your convenience, we've categorized tool integrations by library name. For i
 - [Weaviate](https://github.com/streamlit/cookbook/tree/main/recipes/weaviate) - Build a movie explorer app that leverages the Weaviate vector database.
 
 ### Data Recipes
-- [Replit](https://github.com/streamlit/cookbook/tree/main/recipes/replit) - Build a statistical AB testing app that allow users to adjust parameters and see its influence on the minimum detectable effect. ([YouTube video](https://youtu.be/CJ9E0Sm_hy4))
+- [Replit](https://github.com/streamlit/cookbook/tree/main/recipes/replit) - Build a statistical AB testing app that allow users to adjust parameters and see its influence on the minimum detectable effect.
+--([YouTube video](https://youtu.be/CJ9E0Sm_hy4))
 
 
 ## 🏃 How to run the app?
