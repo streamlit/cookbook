@@ -16,7 +16,7 @@ For your convenience, we've categorized tool integrations by library name. For i
 ### Data Recipes
 | Tool | Description | Resources |
 | -- | -- | -- |
-| [Replit](https://github.com/streamlit/cookbook/tree/main/recipes/replit) | Build a statistical app that allow users select a suitable sample size for AB testing | [YouTube video] (https://youtu.be/CJ9E0Sm_hy4) |
+| [Replit](https://github.com/streamlit/cookbook/tree/main/recipes/replit) | Build a statistical app that allow users select a suitable sample size for AB testing | [YouTube video](https://youtu.be/CJ9E0Sm_hy4) |
 
 
 ## 🏃 How to run the app?
