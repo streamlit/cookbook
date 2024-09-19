@@ -10,8 +10,8 @@ For your convenience, we've categorized tool integrations by library name. For i
 ## 🍪 List of Recipes
 
 ### AI Recipes
-- [Replicate](https://github.com/streamlit/cookbook/tree/main/recipes/replicate)
-- [Weaviate](https://github.com/streamlit/cookbook/tree/main/recipes/weaviate)
+- [Replicate](https://github.com/streamlit/cookbook/tree/main/recipes/replicate) - Build a LLM-powered chatbot that allow users to select an LLM model of their choice for response generation.
+- [Weaviate](https://github.com/streamlit/cookbook/tree/main/recipes/weaviate) - Build a movie explorer app that leverages the Weaviate vector database.
 
 ### Data Recipes
 - [Replit](https://github.com/streamlit/cookbook/tree/main/recipes/replit) - Build a statistical AB testing app that allow users to adjust parameters and see its influence on the minimum detectable effect.
