@@ -11,3 +11,6 @@ pyproject.local.toml
 __pycache__
 data
 notebooks
+.DS_Store
+finetuning_examples
+finetuning_assets
