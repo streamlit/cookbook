@@ -9,7 +9,7 @@ import numpy as np
 from trulens.core import TruSession
 from trulens.core.guardrails.base import context_filter
 from trulens.apps.custom import instrument
-from trulens.apps.custom import TruCustomApp
+from trulens.apps.app import TruApp
 from trulens.providers.openai import OpenAI as OpenAIProvider
 from trulens.core import Feedback
 from trulens.core import Select
@@ -117,14 +117,14 @@ filtered_rag = filtered_RAG_from_scratch()
 
 rag = RAG_from_scratch()
 
-tru_rag = TruCustomApp(
+tru_rag = TruApp(
     rag,
     app_name="RAG",
     app_version="v1",
     feedbacks=feedbacks,
 )
 
-filtered_tru_rag = TruCustomApp(
+filtered_tru_rag = TruApp(
     filtered_rag,
     app_name="RAG",
     app_version="v2",
